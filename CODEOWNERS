@@ -1,0 +1,6 @@
+# @hctsky is the overall owner of this project
+*       @hctsky
+
+# anyone in hct's devteamlead group can review the code in java folder
+src/main/java @hctsky_org/devteamlead
+
