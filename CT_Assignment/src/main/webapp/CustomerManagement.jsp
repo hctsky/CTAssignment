@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Employee Management</title>
+<title>Customer Management</title>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -14,12 +14,12 @@
 <body>
 	<div class="row">
 		<div class="container">
-			<h3 class="text-center">List of Employees</h3>
+			<h3 class="text-center">List of Customers</h3>
 			<hr>
 			<div class="container text-left">
 				<!-- Add new user button redirects to the register.jsp page -->
 				<a href="<%=request.getContextPath()%>/EmployeeServlet/edit"
-					class="btn btn-success">Add New Employee</a>
+					class="btn btn-success">Add New Customer</a>
 		<ul class="navbar-nav">
 			<li><a
 				href="<%=request.getContextPath()%>/index.jsp"
@@ -36,28 +36,25 @@
 						<th>Email</th>
 						<th>Mobile</th>
 						<th>ID</th>
-						<th>Position</th>
-						<th>Salary</th>
-						<th>Actions</th>
+						<th>Reward Points</th>
 					</tr>
 				</thead>
 				<!-- Pass in the list of users receive via the Servlet response to a loop -->
 				<tbody>
-					<c:forEach var="employee" items="${listEmployees}">
+					<c:forEach var="customer" items="${listCustomer}">
 						<!-- For each user in the database, display their information accordingly -->
 						<tr>
-							<td><c:out value="${employee.name}" /></td>
-							<td><c:out value="${employee.password}" /></td>
-							<td><c:out value="${employee.email}" /></td>
-							<td><c:out value="${employee.mobile}" /></td>
-							<td><c:out value="${employee.id}" /></td>
-							<td><c:out value="${employee.position}" /></td>
-							<td><c:out value="${employee.salary}" /></td>
+							<td><c:out value="${customer.name}" /></td>
+							<td><c:out value="${customer.password}" /></td>
+							<td><c:out value="${customer.email}" /></td>
+							<td><c:out value="${customer.mobile}" /></td>
+							<td><c:out value="${customer.id}" /></td>
+							<td><c:out value="${customer.rewardpoints}" /></td>
 							
 							<!-- For each user in the database, Edit/Delete buttons which invokes the edit/delete functions -->
-							<td><a href="edit?name=<c:out value='${employee.name}' />">Edit</a>
+							<td><a href="edit?name=<c:out value='${customer.name}' />">Edit</a>
 								&nbsp;&nbsp;&nbsp;&nbsp; <a
-								href="delete?name=<c:out value='${employee.name}' />">Delete</a></td>
+								href="delete?name=<c:out value='${customer.name}' />">Delete</a></td>
 						</tr>
 					</c:forEach>
 				</tbody>

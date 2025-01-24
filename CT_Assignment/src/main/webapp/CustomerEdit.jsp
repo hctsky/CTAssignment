@@ -34,35 +34,27 @@
 				</c:if>
 				<caption>
 					<h2>
-						<c:if test="${!empty customer.name}">
-Edit Customer
-</c:if>
-						<c:if test="${empty customer.name}">
-Add New Customer
-</c:if>
+						<c:if test="${!empty customer.name}">Edit Customer </c:if>
+						<c:if test="${empty customer.name}">Add New Customer</c:if>
 					</h2>
 				</caption>
 				<c:if test="${customer != null}">
 					<input type="hidden" name="oriName"
-						value="<c:out
-value='${customer.name}' />" />
+						value="<c:out value='${customer.name}' />" />
 				</c:if>
 				<fieldset class="form-group">
 					<label>User Name</label> <input type="text"
-						value="<c:out
-value='${customer.name}' />" class="form-control"
+						value="<c:out value='${customer.name}' />" class="form-control"
 						name="userName" required="required">
 				</fieldset>
 				<fieldset class="form-group">
 					<label>Password</label> <input type="text"
-						value="<c:out
-value='${customer.password}' />" class="form-control"
-						name="password">
+						value="<c:out value='${customer.password}' />"
+						class="form-control" name="password">
 				</fieldset>
 				<fieldset class="form-group">
 					<label>User Email</label> <input type="text"
-						value="<c:out
-value='${customer.email}' />" class="form-control"
+						value="<c:out value='${customer.email}' />" class="form-control"
 						name="email">
 				</fieldset>
 				<fieldset class="form-group">
@@ -80,9 +72,9 @@ value='${customer.id}' />" class="form-control"
 				<fieldset class="form-group">
 					<label> Reward Points</label> <input type="number"
 						value="<c:out
-value='${customer.rewardpoints}' />" class="form-control"
-						name="rewardpoints">
-				</fieldset>				
+value='${customer.rewardpoints}' />"
+						class="form-control" name="rewardpoints">
+				</fieldset>
 				<button type="submit" class="btn btn-success">Save</button>
 				</form>
 			</div>
