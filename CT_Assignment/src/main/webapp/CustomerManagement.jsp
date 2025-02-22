@@ -39,7 +39,7 @@
 						<th>Reward Points</th>
 					</tr>
 				</thead>
-				<!-- Pass in the list of users receive via the Servlet response to a loop testing CT-->
+				<!-- Pass in the list of users receive via the Servlet response to a loop testing CT 2again-->
 				<tbody>
 					<c:forEach var="customer" items="${listCustomer}">
 						<!-- For each user in the database, display their information accordingly -->
