@@ -8,19 +8,19 @@ pipeline{
 		stage("clean"){
 			steps{
 				echo "Start Clean"
-				bat "mvn clean"
+				bat "mvn -f CT_Assignment/pom.xml clean"
 			}
 		}
 		stage("test"){
 			steps{
 				echo "Start Test"
-				bat "mvn test"
+				bat "mvn -f CT_Assignment/pom.xml test"
 			}
 		}
 		stage("build"){
 			steps{
 				echo "Start build"
-				bat "mvn install -DskipTests"
+				bat "mvn -f CT_Assignment/pom.xml install -DskipTests"
 			}
 		}
 	}
