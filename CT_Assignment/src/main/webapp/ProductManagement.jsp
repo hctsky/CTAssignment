@@ -14,7 +14,7 @@
 <body>
 	<div class="row">
 		<div class="container">
-			<h3 class="text-center">List of Products</h3>
+			<h3 class="text-center">List of Products Updated for A2!</h3>
 			<hr>
 			<div class="container text-left">
 				<!-- Add new product button redirects to the ProductRegister.jsp page -->
